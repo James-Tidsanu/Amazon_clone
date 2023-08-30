@@ -1,6 +1,11 @@
+import { ConstructionRounded } from "@mui/icons-material";
+
 export const initialState = {
   basket: [],
 };
+
+//Selecttor
+export const getBasketTotal = (basket) => basket?.reduce
 
 const reducer = (state, action) => {
   console.log(action);
