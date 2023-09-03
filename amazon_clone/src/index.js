@@ -4,23 +4,29 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import reducer, { initialState } from './reducer';
-// import * as serviceWorker from './serviceWorker';
-import { StateProvider } from "./StateProvider";
+import { StateProvider } from './StateProvider';
 
-//const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(
+
+// root.render(
+//   <React.StrictMode>
+//   <StateProvider initalState={initialState} reducer={reducer}>
+//    <App />
+//   </StateProvider>
+// </React.StrictMode>)
 
 ReactDOM.render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer= {reducer}>
      <App />
     </StateProvider>
-  </React.StrictMode>
-  // document.getElementById('root')
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 //reportWebVitals();
-ServiceWorker.unregister();
+// ServiceWorker.unregister();
