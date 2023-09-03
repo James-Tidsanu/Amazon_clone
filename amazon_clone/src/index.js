@@ -4,18 +4,19 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import reducer, { initialState } from './reducer';
-import * as serviceWorker from '.serviceWorker';
+// import * as serviceWorker from './serviceWorker';
+import { StateProvider } from "./StateProvider";
 
 //const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(
 
-ReactDOM. render (
+ReactDOM.render(
   <React.StrictMode>
     <StateProvider initialState={initialState} reducer= {reducer}>
      <App />
     </StateProvider>
   </React.StrictMode>
-  //document.getElementsById('root')
+  // document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
