@@ -14,14 +14,14 @@ function CheckoutProduct({ id, image, title, price, rating }) {
 
   return (
     <div className='checkoutProduct'>
-      <image className='checkoutProduct__image' src={image}
+      <image className='checkoutProduct__image' src={image} alt={title}
       />
 
       <div className='checkoutProduct__info'>
         <p className='checkoutProduct__tittle'>{title}</p>
         <p className='checkoutProduct__price'>
           <small>$</small>
-          <sreong>{price}</sreong>
+          <strong>{price}</strong>
         </p>
         <div className='checkoutProduct__rating'>
           {Array(rating)
@@ -30,7 +30,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
             <p>⭐</p>
           ))}
         </div>
-        <bottonn onClick={removeFromBasket}>remove from basket</bottonn>
+        <botton onClick={removeFromBasket}>remove from basket</botton>
       </div>
     </div>
   )

@@ -3,6 +3,8 @@ import './App.css';
 import Header from './Header';
 import Home from './Home';
 import Checkout from './Checkout'
+import Login from './login';
+
 //import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   BrowserRouter,
@@ -20,6 +22,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
+          <Route path='login' element={<h1>Login Page</h1>} />
           <Route path='/checkout' element={<><Header/><Checkout/></>} />
           <Route path='/' element={<><Header/><Home/></>} />
           <Route path='/orders' element={<h1>Here are your orders</h1>} />
