@@ -14,7 +14,7 @@ import {
   Link,
   useRouteMatch
 } from "react-router-dom";
-import Login from './Login'
+import Login from './Login';
 
 function App() {
   return (
