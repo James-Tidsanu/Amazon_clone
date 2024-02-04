@@ -1,7 +1,6 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from "firebase/auth";
-import { getFirestore } from 'firebase/firestore/lite';
-import firebase from './firebase'
+import { getFirestore } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+import {getAuth} from "firebase/auth";
 
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -15,10 +14,10 @@ const firebaseConfig = {
   measurementId: "G-0NG1CDYWZV"
 };
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+const app = initializeApp(firebaseConfig);
+const db = getFirestore();
 
 
-const auth = firebase.aututh();
+const auth = getAuth(app);
 
 export { db, auth };

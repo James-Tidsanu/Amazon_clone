@@ -1,11 +1,8 @@
-import React, { Fragment } from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Header from './Header';
 import Home from './Home';
 import Checkout from './Checkout'
-
-
-//import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   BrowserRouter,
   Switch,
@@ -17,6 +14,9 @@ import {
 import Login from './Login';
 
 function App() {
+  useEffect(() => {
+
+  }, [])
   return (
     // BEM
 
