@@ -2,6 +2,7 @@ import { ConstructionRounded } from "@mui/icons-material";
 
 export const initialState = {
   basket: [],
+  user: null
 };
 
 //Selecttor
@@ -36,6 +37,12 @@ const reducer = (state, action) => {
         ...state,
         basket: newBasket
         //basket: state.basket.filter(item => item.id !== action.id)
+      }
+
+     case 'SET_USER':
+       return {
+        ...state,
+        user: action.user
       }
 
     default:
